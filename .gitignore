@@ -1,0 +1,8 @@
+.pio/
+__pycache__/
+
+# Test output, not source. The numbers that matter are written up in README.md.
+# NB: a pattern containing a slash is anchored to this file's directory, so plain
+# "results/*.csv" would NOT have matched host/results/ -- hence the explicit paths.
+host/results/*.csv
+host/results/**/*.csv

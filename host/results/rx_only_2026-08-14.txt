@@ -1,0 +1,18 @@
+host 192.168.2.106  ->  FPGA RX 192.168.2.100:9217
+20 real packets queued behind J junk packets, 15 reps each
+
+ J junk  returned  junk echoed   to last echo   delta/junk
+------------------------------------------------------------
+      0        20            0           825us         nanus
+     20        20            0          1051us       11.31us
+     40        20            0          1288us       11.57us
+     60        20            0          1487us       11.03us
+     80        20            0          1617us        9.90us
+
+============================================================
+RX-only cost per packet:  10.10 us  (98,992 pps if RX ran alone)
+Full loop (from burst-drain): compare against that number --
+  slope ~= full-loop cost  ->  RX binds
+  slope <  full-loop cost  ->  TX binds
+
+[exited with code 0]
