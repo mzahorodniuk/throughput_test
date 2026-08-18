@@ -37,6 +37,10 @@ import time
 
 import scis
 
+# The identifiers this harness transmits. Anything else on these ports is
+# foreign traffic and must not be counted as a returned probe.
+OUR_IDS = frozenset(scis.WIDE_BAND_IDS)
+
 # 2 KB socket buffer / 17 bytes per packet = ~120. Stay under it so a run
 # measures the drain rate rather than the overflow behaviour.
 DEFAULT_BURST = 100
@@ -82,7 +86,12 @@ class TimedReceiver(scis.Receiver):
                 self.junk += junk
 
                 for identifier, seq in records:
-                    if identifier == scis.CAN_IDENTIFIER:
+                    # Metrics from the CAN bus are not our probes.
+                    # can_metric_source is a passive tap, so every ID on the bus
+                    # arrives here -- 0x40 as well as the documented 0x80.
+                    # Counting them as arrivals smears the timestamps and turns
+                    # the slope into noise.
+                    if identifier not in OUR_IDS:
                         self.can_count += 1
                         self.can_seqs.add(seq)
                         continue

@@ -37,6 +37,10 @@ import time
 
 import scis
 
+# The identifiers this harness transmits. Anything else on these ports is
+# foreign traffic and must not be counted as a returned probe.
+OUR_IDS = frozenset(scis.WIDE_BAND_IDS)
+
 # Same 9 bytes and same wire cost as a metric packet, but 'X01' != 'V01' so the
 # adapter drops it after the read instead of forwarding it to the FIFO.
 JUNK_PROTOCOL = b"X01"
@@ -81,7 +85,17 @@ class TimedReceiver(scis.Receiver):
                 records, junk = scis.unpack_all(data)
                 self.junk += junk
 
-                for _, seq in records:
+                for identifier, seq in records:
+                    # Metrics from the CAN bus are not our probes.
+                    # can_metric_source is a passive tap, so every ID on the bus
+                    # arrives here -- 0x40 as well as the documented 0x80.
+                    # Counting them as arrivals smears the timestamps and turns
+                    # the slope into noise.
+                    if identifier not in OUR_IDS:
+                        self.can_count += 1
+                        self.can_seqs.add(seq)
+                        continue
+
                     self.count[port] += 1
                     if seq in self.seqs[port]:
                         self.dupes[port] += 1

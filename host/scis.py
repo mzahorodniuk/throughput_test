@@ -69,6 +69,10 @@ Q_SCALE = 1 << 10
 # One per socket so each port's traffic is independently identifiable.
 WIDE_BAND_IDS = [0xE140, 0xE141, 0xE142, 0xE143, 0xE1C0, 0xE1C1, 0xE1C2, 0xE1C3]
 
+# The identifiers this harness transmits. Everything else on these ports is
+# foreign traffic and must not be counted as a returned probe.
+OUR_IDS = frozenset(WIDE_BAND_IDS)
+
 # Stay strictly inside 0..90 degC so no reading can trip the interlock (which
 # latches until SW3 is pressed and would poison every later step).
 SEQ_MIN = 1 * Q_SCALE              #  1.0 degC
@@ -307,7 +311,12 @@ class Receiver:
                 self.junk += junk
 
                 for identifier, seq in records:
-                    if identifier == CAN_IDENTIFIER:
+                    # Anything we did not send is somebody else's traffic.
+                    # can_metric_source is a passive tap, so every ID on the
+                    # bus arrives here -- 0x40 as well as the documented
+                    # 0x80. Counting those as UDP metrics inflates `unique`
+                    # and fails T0 against a perfectly healthy board.
+                    if identifier not in OUR_IDS:
                         self.can_count += 1
                         if seq in self.can_seqs:
                             self.can_dupes += 1
