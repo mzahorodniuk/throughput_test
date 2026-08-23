@@ -1,0 +1,29 @@
+{
+  "bitstream_md5": "d0f2e561f1a1f3f12d4b1102e92dc53e",
+  "both_can_rate": 1400,
+  "both_duration": 5.0,
+  "both_repeats": 2,
+  "can_duration": 5.0,
+  "can_ladder": [
+    200,
+    600,
+    1000,
+    1200,
+    1300,
+    1400,
+    1450,
+    1500,
+    1600
+  ],
+  "can_repeats": 3,
+  "collected_at": "2026-08-23T23:48:22+0200",
+  "eth_rungs": [
+    0,
+    20000,
+    60000,
+    90000,
+    100000,
+    105000
+  ],
+  "note": "host-timed CAN window; matched Ethernet rungs with/without CAN"
+}

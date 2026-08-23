@@ -1,0 +1,86 @@
+{
+  "bitstream": {
+    "md5": "ce36f9c1cf598ac54c00973cea831197",
+    "mtime": "2026-08-21T16:05:47",
+    "path": "/home/misha/FPGA-centric-SCIS/hardware/fpga/ccgm1a1/bitstream.bit",
+    "size": 708066
+  },
+  "campaign": {
+    "both_ladder": [
+      1000,
+      10000,
+      20000,
+      30000,
+      40000,
+      60000,
+      80000,
+      90000,
+      100000,
+      110000,
+      120000
+    ],
+    "can_duration": 5.0,
+    "can_ladder": [
+      100,
+      200,
+      400,
+      600,
+      800,
+      1000,
+      1200,
+      1400,
+      1600
+    ],
+    "can_rate": 1400,
+    "duration": 3.0,
+    "eth_ladder": [
+      1000,
+      5000,
+      10000,
+      20000,
+      25000,
+      30000,
+      35000,
+      40000,
+      50000,
+      60000,
+      80000,
+      90000,
+      100000,
+      105000,
+      110000,
+      115000,
+      120000,
+      130000,
+      140000,
+      148000
+    ],
+    "nrecv": 2,
+    "nsend": 2,
+    "suite": "all",
+    "wire_limit_pps": 148809
+  },
+  "collected_at": "2026-08-21T16:06:06+0200",
+  "git": {
+    "branch": "tx-buffer-batching",
+    "dirty_files": 77,
+    "head": "4d43f86"
+  },
+  "hdl_generics": {
+    "TX_BATCH_MAX_PACKETS": 4,
+    "TX_FLUSH_IDLE_CLKS": 300,
+    "TX_MAX_OPEN_CLKS": 8192,
+    "WATCHDOG_CLKS": 65535,
+    "minimum_free_tx_buffer_memory": 256
+  },
+  "host": {
+    "kernel": "6.8.0-124-generic",
+    "ncpu": 4,
+    "netdev_max_backlog": "1000",
+    "nic": "enp2s0",
+    "nic_duplex": "full",
+    "nic_speed_mbit": "1000",
+    "rmem_max": "212992"
+  },
+  "tag": "batch4"
+}

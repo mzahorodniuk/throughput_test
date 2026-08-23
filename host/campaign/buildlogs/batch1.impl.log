@@ -1,0 +1,661 @@
+nextpnr-himbaechel --device=CCGM1A1 --json design.json -o ccf=../../hdl/constraints_dc_and_w5500.ccf -o out=implementation.txt --router router2 --parallel-refine --threads 4 -o fpga_mode=speed --seed 3
+Info: Using uarch 'gatemate' for device 'CCGM1A1'
+Info: Using timing mode 'WORST'.
+Info: Using performance mode 'SPEED'.
+
+Info: Detected regions..
+Info:     top rx_w5500_fsm :3355
+Info:     top rx_w5500_fsm :3356
+Info:     top rx_w5500_fsm :3357
+Info:     top tx_w5500_fsm :1572
+Info:     top tx_w5500_fsm :1573
+Info:     top tx_w5500_fsm :1574
+Info:     top can_source u_adapter packet_buffer_fifo :5323
+Info:     top dataconcentrator unit_metric_packet_manager :7209
+Info:     top can_source u_adapter packet_buffer_fifo :5324
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4962
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4967
+Info:     top tx_w5500_fsm u_w5500_stream_manager :4962
+Info:     top can_source u_core :5836
+Info:     top can_source u_core :5834
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic :6316
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic :6152
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic :6314
+Info:     top dataconcentrator unit_telemetry_sender :6497
+Info:     top dataconcentrator unit_telemetry_sender :6496
+Info:     top dataconcentrator unit_telemetry_sender :6495
+Info:     top dataconcentrator unit_telemetry_sender :6494
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_7 :7621
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_7 :7620
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_7 :7618
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_7 :7623
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_7 :7622
+Info:     top can_source :4313
+Info:     top can_source :4314
+Info:     top can_source u_core :5847
+Info:     top can_source u_core :5846
+Info:     top can_source u_core :5845
+Info:     top can_source u_core :5844
+Info:     top can_source u_core :5843
+Info:     top can_source u_core :5842
+Info:     top can_source u_core :5841
+Info:     top can_source u_core :5840
+Info:     top can_source u_core :5839
+Info:     top can_source u_core :5838
+Info:     top can_source u_core :5837
+Info:     top can_source u_core :5835
+Info:     top can_source u_core :5833
+Info:     top can_source u_core :5831
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_7 :7617
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_7 :7616
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_7 :7615
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic :6146
+Info:     top can_source u_core :5848
+Info:     top can_source u_core :5849
+Info:     top can_source u_adapter packet_buffer_fifo :5322
+Info:     top can_source u_adapter packet_buffer_fifo :5320
+Info:     top can_source u_adapter packet_buffer_fifo :5319
+Info:     top can_source u_adapter packet_buffer_fifo :5318
+Info:     top can_source u_adapter packet_buffer_fifo :5325
+Info:     top can_source u_adapter :5985
+Info:     top can_source u_adapter :5986
+Info:     top can_source u_adapter :5987
+Info:     top can_source u_adapter :5988
+Info:     top unit_udp_packet_adapter :4256
+Info:     top unit_udp_packet_adapter :4257
+Info:     top unit_udp_packet_adapter :4258
+Info:     top unit_udp_packet_adapter :4259
+Info:     top unit_udp_packet_adapter :4260
+Info:     top unit_udp_packet_adapter :4261
+Info:     top unit_udp_packet_adapter packet_buffer_fifo :5324
+Info:     top unit_udp_packet_adapter packet_buffer_fifo :5325
+Info:     top unit_udp_packet_adapter packet_buffer_fifo :5318
+Info:     top unit_udp_packet_adapter packet_buffer_fifo :5319
+Info:     top unit_udp_packet_adapter packet_buffer_fifo :5320
+Info:     top unit_udp_packet_adapter packet_buffer_fifo :5322
+Info:     top unit_udp_packet_adapter packet_buffer_fifo :5323
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic :6315
+Info:     top rx_spi_master :4066
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic buffer_fifo :5324
+Info:     top rx_spi_master :4053
+Info:     top rx_spi_master :4054
+Info:     top rx_spi_master :4055
+Info:     top rx_spi_master :4056
+Info:     top rx_spi_master :4057
+Info:     top rx_spi_master :4058
+Info:     top rx_spi_master :4059
+Info:     top rx_spi_master :4061
+Info:     top rx_spi_master :4062
+Info:     top rx_spi_master :4063
+Info:     top rx_spi_master :4064
+Info:     top rx_spi_master :4065
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic buffer_fifo :5325
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic buffer_fifo :5318
+Info:     top rx_spi_master u_tx_payload_fifo :5138
+Info:     top rx_spi_master u_tx_payload_fifo :5139
+Info:     top rx_spi_master u_tx_payload_fifo :5144
+Info:     top rx_spi_master u_tx_payload_fifo :5145
+Info:     top rx_spi_master u_tx_payload_fifo :5140
+Info:     top rx_spi_master u_tx_payload_fifo :5142
+Info:     top rx_spi_master u_tx_payload_fifo :5143
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic buffer_fifo :5319
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic buffer_fifo :5320
+Info:     top rx_spi_master u_rx_payload_fifo :5138
+Info:     top rx_spi_master u_rx_payload_fifo :5139
+Info:     top rx_spi_master u_rx_payload_fifo :5144
+Info:     top rx_spi_master u_rx_payload_fifo :5145
+Info:     top rx_spi_master u_rx_payload_fifo :5140
+Info:     top rx_spi_master u_rx_payload_fifo :5142
+Info:     top rx_spi_master u_rx_payload_fifo :5143
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic buffer_fifo :5322
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic buffer_fifo :5323
+Info:     top tx_spi_master :4066
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic :6148
+Info:     top tx_spi_master :4053
+Info:     top tx_spi_master :4054
+Info:     top tx_spi_master :4055
+Info:     top tx_spi_master :4056
+Info:     top tx_spi_master :4057
+Info:     top tx_spi_master :4058
+Info:     top tx_spi_master :4059
+Info:     top tx_spi_master :4061
+Info:     top tx_spi_master :4062
+Info:     top tx_spi_master :4063
+Info:     top tx_spi_master :4064
+Info:     top tx_spi_master :4065
+Info:     top tx_spi_master u_tx_payload_fifo :5138
+Info:     top tx_spi_master u_tx_payload_fifo :5139
+Info:     top tx_spi_master u_tx_payload_fifo :5144
+Info:     top tx_spi_master u_tx_payload_fifo :5145
+Info:     top tx_spi_master u_tx_payload_fifo :5140
+Info:     top tx_spi_master u_tx_payload_fifo :5142
+Info:     top tx_spi_master u_tx_payload_fifo :5143
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_6 :7621
+Info:     top tx_spi_master u_rx_payload_fifo :5138
+Info:     top tx_spi_master u_rx_payload_fifo :5139
+Info:     top tx_spi_master u_rx_payload_fifo :5144
+Info:     top tx_spi_master u_rx_payload_fifo :5145
+Info:     top tx_spi_master u_rx_payload_fifo :5140
+Info:     top tx_spi_master u_rx_payload_fifo :5142
+Info:     top tx_spi_master u_rx_payload_fifo :5143
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_6 :7620
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_6 :7618
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_6 :7623
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_6 :7622
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_6 :7617
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_6 :7616
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_6 :7615
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_0 :7621
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_0 :7620
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_0 :7618
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic :6318
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic :6153
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_0 :7623
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_0 :7622
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_0 :7617
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_0 :7616
+Info:     top rx_w5500_fsm :3345
+Info:     top rx_w5500_fsm :3346
+Info:     top rx_w5500_fsm :3348
+Info:     top rx_w5500_fsm :3353
+Info:     top rx_w5500_fsm :3359
+Info:     top rx_w5500_fsm :3360
+Info:     top rx_w5500_fsm :3363
+Info:     top rx_w5500_fsm :3364
+Info:     top rx_w5500_fsm :3365
+Info:     top rx_w5500_fsm :3367
+Info:     top rx_w5500_fsm :3368
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic :6311
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic buffer_fifo :5325
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic buffer_fifo :5324
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic buffer_fifo :5323
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic buffer_fifo :5320
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic buffer_fifo :5319
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic buffer_fifo :5322
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic buffer_fifo :5318
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_2 :7621
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_2 :7620
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_1 :7616
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_2 :7618
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_2 :7623
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_2 :7622
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_2 :7617
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_2 :7616
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_3 :7621
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_3 :7620
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_3 :7618
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_3 :7623
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_1 :7615
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_3 :7622
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_2 :7615
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_3 :7617
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_3 :7616
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_0 :7615
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_3 :7615
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5143
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5142
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5140
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5145
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5144
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5139
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5138
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5143
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5142
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5140
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5145
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5144
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5139
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5138
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_5 :7621
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_5 :7620
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer :4612
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer :4611
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer :4610
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer :4609
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer :4608
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer :4607
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_5 :7618
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_5 :7623
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_5 :7622
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_5 :7617
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_5 :7616
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4966
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4965
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4964
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4960
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4959
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4958
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4957
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4955
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4954
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4953
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4952
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4951
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_5 :7615
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic :6147
+Info:     top dataconcentrator unit_metric_packet_manager :7215
+Info:     top dataconcentrator unit_metric_packet_manager :7214
+Info:     top dataconcentrator unit_metric_packet_manager :7212
+Info:     top dataconcentrator unit_metric_packet_manager :7210
+Info:     top dataconcentrator unit_metric_packet_manager :7208
+Info:     top dataconcentrator unit_metric_packet_manager :7207
+Info:     top dataconcentrator unit_metric_packet_manager :7206
+Info:     top dataconcentrator unit_metric_packet_manager :7205
+Info:     top dataconcentrator unit_metric_packet_manager :7204
+Info:     top dataconcentrator unit_metric_packet_manager :7203
+Info:     top dataconcentrator unit_metric_packet_manager :7202
+Info:     top dataconcentrator unit_metric_packet_manager :7201
+Info:     top dataconcentrator unit_metric_packet_manager :7200
+Info:     top dataconcentrator unit_metric_packet_manager :7199
+Info:     top tx_w5500_fsm :1563
+Info:     top tx_w5500_fsm :1565
+Info:     top tx_w5500_fsm :1570
+Info:     top tx_w5500_fsm :1576
+Info:     top tx_w5500_fsm :1577
+Info:     top tx_w5500_fsm :1579
+Info:     top tx_w5500_fsm :1580
+Info:     top tx_w5500_fsm :1581
+Info:     top tx_w5500_fsm :1582
+Info:     top tx_w5500_fsm :1584
+Info:     top tx_w5500_fsm :1585
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_4 :7621
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_4 :7620
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_4 :7618
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_4 :7623
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic :6149
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_4 :7622
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic :6313
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic :6312
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_4 :7617
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_4 :7616
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_1 :7621
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_1 :7620
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_1 :7618
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_1 :7623
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_1 :7622
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_1 :7617
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5143
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5142
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5140
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5145
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5144
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5139
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5138
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_4 :7615
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5143
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5142
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5140
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5145
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5144
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5139
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5138
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer :4612
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer :4611
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer :4610
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer :4609
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer :4608
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer :4607
+Info:     top tx_w5500_fsm u_w5500_stream_manager :4963
+Info:     top tx_w5500_fsm u_w5500_stream_manager :4960
+Info:     top tx_w5500_fsm u_w5500_stream_manager :4959
+Info:     top tx_w5500_fsm u_w5500_stream_manager :4955
+Info:     top tx_w5500_fsm u_w5500_stream_manager :4954
+Info:     top tx_w5500_fsm u_w5500_stream_manager :4953
+Info:     top tx_w5500_fsm u_w5500_stream_manager :4952
+Info:     top tx_w5500_fsm u_w5500_stream_manager :4951
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic :6150
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5141
+Info:     top tx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5141
+Info:     top tx_w5500_fsm :1567
+Info:     top tx_w5500_fsm :1566
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_payload_fifo :5141
+Info:     top rx_w5500_fsm u_w5500_axi_data_streamer u_rx_fifo :5141
+Info:     top rx_w5500_fsm :3350
+Info:     top rx_w5500_fsm :3349
+Info:     top tx_spi_master u_rx_payload_fifo :5141
+Info:     top tx_spi_master u_tx_payload_fifo :5141
+Info:     top rx_spi_master u_rx_payload_fifo :5141
+Info:     top rx_spi_master u_tx_payload_fifo :5141
+Info:     top unit_udp_packet_adapter packet_buffer_fifo :5321
+Info:     top can_source u_adapter packet_buffer_fifo :5321
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_0 :7619
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_1 :7619
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_2 :7619
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_3 :7619
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_4 :7619
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_5 :7619
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_6 :7619
+Info:     top dataconcentrator unit_metric_packet_manager priority_fifo_7 :7619
+Info:     top dataconcentrator gen_threshold_per_channel[1].unit_threshold_logic buffer_fifo :5321
+Info:     top dataconcentrator gen_threshold_per_channel[0].unit_threshold_logic buffer_fifo :5321
+Info:     top dataconcentrator unit_metric_packet_manager :7216
+Info:     top tx_spi_master :4060
+Info:     top rx_spi_master :4060
+Info:     top rx_w5500_fsm :3352
+Info:     top tx_w5500_fsm :1569
+Info:     top tx_w5500_fsm u_w5500_stream_manager :4961
+Info:     top rx_w5500_fsm u_w5500_stream_manager :4961
+Info:     top can_source u_core :5850
+Info:     top tx_w5500_fsm :1571
+Info:     top tx_w5500_fsm :1568
+Info:     top dataconcentrator unit_metric_packet_manager :7211
+Info:     top rx_w5500_fsm :3354
+Info:     top rx_w5500_fsm :3351
+Info:     top rx_w5500_fsm :3347
+Info:     top tx_w5500_fsm :1564
+Info:     top tx_w5500_fsm :1578
+Info:     top rx_w5500_fsm :3361
+Info:     top
+Info: Parsing CCF file..
+Info: Assign cell region based on attributes..
+Info: Packing constants..
+Info: Running cleanups..
+Info: Packing IOs..
+Info:     Constraining '$iopadmap$top.sclk_1' to pad 'IO_NB_A4'.
+Info:     Constraining '$iopadmap$top.sclk_0' to pad 'IO_NB_A0'.
+Info:     Constraining '$iopadmap$top.onboard_leds_7' to pad 'IO_EB_B8'.
+Info:     Constraining '$iopadmap$top.onboard_leds_6' to pad 'IO_EB_B7'.
+Info:     Constraining '$iopadmap$top.onboard_leds_5' to pad 'IO_EB_B6'.
+Info:     Constraining '$iopadmap$top.onboard_leds_4' to pad 'IO_EB_B5'.
+Info:     Constraining '$iopadmap$top.onboard_leds_3' to pad 'IO_EB_B4'.
+Info:     Constraining '$iopadmap$top.onboard_leds_2' to pad 'IO_EB_B3'.
+Info:     Constraining '$iopadmap$top.onboard_leds_1' to pad 'IO_EB_B2'.
+Info:     Constraining '$iopadmap$top.onboard_leds' to pad 'IO_EB_B1'.
+Info:     Constraining '$iopadmap$top.mosi_1' to pad 'IO_NB_A6'.
+Info:     Constraining '$iopadmap$top.mosi_0' to pad 'IO_NB_A2'.
+Info:     Constraining '$iopadmap$top.miso_1' to pad 'IO_NB_A7'.
+Info:     Constraining '$iopadmap$top.miso_0' to pad 'IO_NB_A3'.
+Info:     Constraining '$iopadmap$top.cs_1' to pad 'IO_NB_A5'.
+Info:     Constraining '$iopadmap$top.cs_0' to pad 'IO_NB_A1'.
+Info:     Constraining '$iopadmap$top.clk' to pad 'IO_SB_A8'.
+Info:     Constraining '$iopadmap$top.can_tx' to pad 'IO_NB_B5'.
+Info:     Constraining '$iopadmap$top.can_rx' to pad 'IO_NB_B4'.
+Info:     Constraining '$iopadmap$top.button' to pad 'IO_EB_B0'.
+Info: Insert clocking cells..
+Info: Packing PLLs..
+Info:     PLL fout= 30.0000 MHz (fout error 0.00000% of requested 30.0000 MHz)
+Info: constraining clock net '$auto$clkbufmap.cc:262:execute$95792' to 30.00 MHz
+Info: Sort BUFGs..
+Info: Packing BUFGs..
+Info: Packing IO SELs..
+Info: Packing misc..
+Info: Packing RAMs..
+Info: Packing SERDES..
+Info: Packing multipliers...
+Info: Packing ADDFs..
+Info: Packing CPEs..
+Info: Removing unused constants..
+Info:     Removed unused VCC cell.
+Info:     Removed unused GND cell.
+Info: Fix cell assigned regions..
+Info: Checksum: 0x1c5c2a35
+
+Info: Device utilisation:
+Info: 	            USR_RSTN:       1/      1   100%
+Info: 	            CPE_COMP:       0/  20480     0%
+Info: 	         CPE_CPLINES:     177/  20480     0%
+Info: 	               IOSEL:      20/    162    12%
+Info: 	                GPIO:      20/    162    12%
+Info: 	               CLKIN:       1/      1   100%
+Info: 	              GLBOUT:       1/      1   100%
+Info: 	                 PLL:       1/      4    25%
+Info: 	            CFG_CTRL:       0/      1     0%
+Info: 	              SERDES:       0/      1     0%
+Info: 	              CPE_LT:   14997/  40960    36%
+Info: 	              CPE_FF:    3769/  40960     9%
+Info: 	           CPE_RAMIO:    2581/  40960     6%
+Info: 	            RAM_HALF:      23/     64    35%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 8618 cells, random placement wirelen = 1354553.
+Info:     at initial placer iter 0, wirelen = 12211
+Info:     at initial placer iter 1, wirelen = 10147
+Info:     at initial placer iter 2, wirelen = 9577
+Info:     at initial placer iter 3, wirelen = 8985
+Info: Running main analytical placer, max placement attempts per cell = 59492232.
+Info:     at iteration #1, type ALL: wirelen solved = 8924, spread = 328078, legal = 463223; time = 2.95s
+Info:     at iteration #2, type ALL: wirelen solved = 18563, spread = 163953, legal = 236314; time = 1.66s
+Info:     at iteration #3, type ALL: wirelen solved = 25089, spread = 126680, legal = 182310; time = 1.37s
+Info:     at iteration #4, type ALL: wirelen solved = 28671, spread = 117224, legal = 170793; time = 1.26s
+Info:     at iteration #5, type ALL: wirelen solved = 30752, spread = 107009, legal = 161842; time = 1.15s
+Info:     at iteration #6, type ALL: wirelen solved = 31821, spread = 105346, legal = 145035; time = 0.96s
+Info:     at iteration #7, type ALL: wirelen solved = 33704, spread = 104300, legal = 150603; time = 1.05s
+Info:     at iteration #8, type ALL: wirelen solved = 36324, spread = 104233, legal = 130871; time = 0.47s
+Info:     at iteration #9, type ALL: wirelen solved = 38360, spread = 100567, legal = 124254; time = 0.49s
+Info:     at iteration #10, type ALL: wirelen solved = 39542, spread = 101745, legal = 121825; time = 0.42s
+Info:     at iteration #11, type ALL: wirelen solved = 40818, spread = 96983, legal = 114286; time = 0.39s
+Info:     at iteration #12, type ALL: wirelen solved = 42787, spread = 98458, legal = 116754; time = 0.43s
+Info:     at iteration #13, type ALL: wirelen solved = 43912, spread = 98260, legal = 113217; time = 0.41s
+Info:     at iteration #14, type ALL: wirelen solved = 44981, spread = 97303, legal = 113894; time = 0.40s
+Info:     at iteration #15, type ALL: wirelen solved = 46029, spread = 99340, legal = 112433; time = 0.37s
+Info:     at iteration #16, type ALL: wirelen solved = 47565, spread = 95978, legal = 107742; time = 0.37s
+Info:     at iteration #17, type ALL: wirelen solved = 48350, spread = 97126, legal = 109512; time = 0.37s
+Info:     at iteration #18, type ALL: wirelen solved = 49704, spread = 103076, legal = 116704; time = 0.38s
+Info:     at iteration #19, type ALL: wirelen solved = 50930, spread = 99080, legal = 110226; time = 0.37s
+Info:     at iteration #20, type ALL: wirelen solved = 53021, spread = 97905, legal = 108369; time = 0.37s
+Info:     at iteration #21, type ALL: wirelen solved = 53372, spread = 97224, legal = 107180; time = 0.38s
+Info:     at iteration #22, type ALL: wirelen solved = 54481, spread = 96969, legal = 109795; time = 0.37s
+Info:     at iteration #23, type ALL: wirelen solved = 55400, spread = 97553, legal = 111093; time = 0.37s
+Info:     at iteration #24, type ALL: wirelen solved = 56364, spread = 98229, legal = 110045; time = 0.36s
+Info:     at iteration #25, type ALL: wirelen solved = 57387, spread = 102430, legal = 113762; time = 0.38s
+Info:     at iteration #26, type ALL: wirelen solved = 58467, spread = 89787, legal = 101314; time = 0.37s
+Info:     at iteration #27, type ALL: wirelen solved = 59405, spread = 85465, legal = 100628; time = 0.37s
+Info:     at iteration #28, type ALL: wirelen solved = 60101, spread = 86750, legal = 99788; time = 0.37s
+Info:     at iteration #29, type ALL: wirelen solved = 60437, spread = 86692, legal = 101518; time = 0.44s
+Info:     at iteration #30, type ALL: wirelen solved = 62287, spread = 90363, legal = 103590; time = 0.37s
+Info:     at iteration #31, type ALL: wirelen solved = 62849, spread = 85680, legal = 99651; time = 0.36s
+Info:     at iteration #32, type ALL: wirelen solved = 63306, spread = 87009, legal = 101045; time = 0.36s
+Info:     at iteration #33, type ALL: wirelen solved = 63699, spread = 85627, legal = 99201; time = 0.37s
+Info:     at iteration #34, type ALL: wirelen solved = 65126, spread = 85696, legal = 102177; time = 0.37s
+Info:     at iteration #35, type ALL: wirelen solved = 66228, spread = 88890, legal = 103552; time = 0.37s
+Info:     at iteration #36, type ALL: wirelen solved = 66864, spread = 87776, legal = 101967; time = 0.41s
+Info:     at iteration #37, type ALL: wirelen solved = 68306, spread = 90522, legal = 103551; time = 0.38s
+Info:     at iteration #38, type ALL: wirelen solved = 68579, spread = 98613, legal = 108439; time = 0.37s
+Info: HeAP Placer Time: 28.21s
+Info:   of which solving equations: 10.68s
+Info:   of which spreading cells: 3.22s
+Info:   of which strict legalisation: 9.47s
+Info: Running parallel refinement with 4 threads.
+Info:   at iteration #1: temp = 0.000000, timing cost = 728, wirelen = 116621
+Info:   at iteration #5: temp = 0.000000, timing cost = 291, wirelen = 97669
+Info:   at iteration #10: temp = 0.000000, timing cost = 255, wirelen = 93333
+Info:   at iteration #15: temp = 0.000000, timing cost = 277, wirelen = 91135
+Info:   at iteration #20: temp = 0.000000, timing cost = 221, wirelen = 90493
+Info:   at iteration #25: temp = 0.000000, timing cost = 241, wirelen = 90050
+Info:   at iteration #26: temp = 0.000000, timing cost = 242, wirelen = 90050
+Info: Placement refine time 12.18s
+
+Info: Max frequency for clock 'can_source.clk': 28.07 MHz (FAIL at 30.00 MHz)
+
+Info: Max delay <async> -> posedge can_source.clk: 8.73 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 17 endpoint(s)
+Info:          + represents [1,17) endpoint(s)
+Info: [ -2288,   -579) |*+
+Info: [  -579,   1130) |*+
+Info: [  1130,   2839) |**+
+Info: [  2839,   4548) |+
+Info: [  4548,   6257) |+
+Info: [  6257,   7966) |***+
+Info: [  7966,   9675) |*****+
+Info: [  9675,  11384) |+
+Info: [ 11384,  13093) |*+
+Info: [ 13093,  14802) |**+
+Info: [ 14802,  16511) |+
+Info: [ 16511,  18220) |+
+Info: [ 18220,  19929) |********+
+Info: [ 19929,  21638) |*************************+
+Info: [ 21638,  23347) |*****************************+
+Info: [ 23347,  25056) |*********************************+
+Info: [ 25056,  26765) |******************************************+
+Info: [ 26765,  28474) |**************************************************+
+Info: [ 28474,  30183) |*************************************+
+Info: [ 30183,  31892) |************************************************************ 
+Info: Repacking RAMs..
+Info: Repacking CPEs..
+Info: Remove unused clocking cells..
+Info: Routing multipliers...
+Info: Routing clock nets...
+Info:     routing net 'can_source.clk' to 3786 users
+Info: Clock router time 5.99s.
+Info: Running router2...
+Info: Setting up routing resources...
+Info: Running main router loop...
+Info:     iter=1 wires=441727 overused=29812 overuse=31445 resources=18651 overused=1550 overuse=2014 archfail=NA
+Info:     iter=2 wires=459378 overused=12215 overuse=12250 resources=17241 overused=400 overuse=425 archfail=NA
+Info:     iter=3 wires=465943 overused=5364 overuse=5375 resources=17413 overused=203 overuse=219 archfail=NA
+Info:     iter=4 wires=469772 overused=2307 overuse=2308 resources=17188 overused=94 overuse=99 archfail=NA
+Info:     iter=5 wires=472060 overused=1238 overuse=1238 resources=16968 overused=67 overuse=74 archfail=NA
+Info:     iter=6 wires=474069 overused=823 overuse=824 resources=16848 overused=48 overuse=53 archfail=NA
+Info:     iter=7 wires=474962 overused=484 overuse=484 resources=16750 overused=33 overuse=35 archfail=NA
+Info:     iter=8 wires=475500 overused=247 overuse=247 resources=16629 overused=20 overuse=22 archfail=NA
+Info:     iter=9 wires=475776 overused=198 overuse=198 resources=16594 overused=17 overuse=18 archfail=NA
+Info:     iter=10 wires=476064 overused=114 overuse=114 resources=16518 overused=8 overuse=8 archfail=NA
+Info:     iter=11 wires=476164 overused=91 overuse=91 resources=16492 overused=5 overuse=6 archfail=NA
+Info:     iter=12 wires=476295 overused=75 overuse=75 resources=16465 overused=3 overuse=3 archfail=NA
+Info:     iter=13 wires=476306 overused=60 overuse=60 resources=16469 overused=3 overuse=3 archfail=NA
+Info:     iter=14 wires=476395 overused=45 overuse=45 resources=16448 overused=3 overuse=3 archfail=NA
+Info:     iter=15 wires=476439 overused=49 overuse=49 resources=16458 overused=2 overuse=3 archfail=NA
+Info:     iter=16 wires=476506 overused=36 overuse=36 resources=16452 overused=3 overuse=3 archfail=NA
+Info:     iter=17 wires=476490 overused=49 overuse=49 resources=16451 overused=3 overuse=3 archfail=NA
+Info:     iter=18 wires=476532 overused=42 overuse=42 resources=16445 overused=2 overuse=2 archfail=NA
+Info:     iter=19 wires=476604 overused=29 overuse=29 resources=16435 overused=2 overuse=2 archfail=NA
+Info:     iter=20 wires=476606 overused=26 overuse=26 resources=16426 overused=1 overuse=1 archfail=NA
+Info:     iter=21 wires=476628 overused=34 overuse=34 resources=16429 overused=1 overuse=1 archfail=NA
+Info:     iter=22 wires=476604 overused=22 overuse=22 resources=16422 overused=0 overuse=0 archfail=NA
+Info:     iter=23 wires=476679 overused=19 overuse=19 resources=16425 overused=1 overuse=1 archfail=NA
+Info:     iter=24 wires=476675 overused=26 overuse=26 resources=16408 overused=0 overuse=0 archfail=NA
+Info:     iter=25 wires=476708 overused=16 overuse=16 resources=16410 overused=0 overuse=0 archfail=NA
+Info:     iter=26 wires=476699 overused=16 overuse=16 resources=16401 overused=0 overuse=0 archfail=NA
+Info:     iter=27 wires=476698 overused=10 overuse=10 resources=16401 overused=0 overuse=0 archfail=NA
+Info:     iter=28 wires=476698 overused=8 overuse=8 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=29 wires=476708 overused=4 overuse=4 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=30 wires=476699 overused=4 overuse=4 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=31 wires=476708 overused=4 overuse=4 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=32 wires=476718 overused=14 overuse=14 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=33 wires=476735 overused=4 overuse=4 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=34 wires=476757 overused=4 overuse=4 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=35 wires=476748 overused=2 overuse=2 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=36 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=37 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=38 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=39 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=40 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=41 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=42 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=43 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=44 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=45 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=46 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=47 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=48 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=49 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=50 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=51 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=52 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=53 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=54 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=55 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=56 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=57 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=58 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=59 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=60 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=61 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=62 wires=476755 overused=1 overuse=1 resources=16398 overused=0 overuse=0 archfail=NA
+Info:     iter=63 wires=476764 overused=0 overuse=0 resources=16394 overused=0 overuse=0 archfail=0
+Info: Router2 time 42.95s
+Info: Running router1 to check that route is legal...
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 0 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:          0 |        0          0 |    0     0 |         0|       1.36       1.36|
+Info: Routing complete.
+Info: Router1 time 1.36s
+Info: Checksum: 0xf0bd23a7
+
+Info: Critical path report for clock 'can_source.clk' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-skew -0.99 -0.99 Net can_source.clk (98,7) -> (76,93)
+Info:                          Sink $auto$ff.cc:337:slice$17466.CLK_INT
+Info:   clk-to-q  0.59 -0.40 Source $auto$ff.cc:337:slice$20249.DOUT
+Info:    routing  3.92  3.52 Net tx_w5500_fsm.u_w5500_axi_data_streamer.u_payload_fifo.fifo_count[2] (98,7) -> (98,9)
+Info:                          Sink $abc$74544$auto$blifparse.cc:397:parse_blif$76482.D0_00
+Info:      logic  0.55  4.07 Source $abc$74544$auto$blifparse.cc:397:parse_blif$76482.OUT
+Info:    routing  0.67  4.74 Net $abc$74544$new_n10638 (98,9) -> (97,10)
+Info:                          Sink $abc$74544$auto$blifparse.cc:397:parse_blif$76483.D1_01
+Info:      logic  0.50  5.24 Source $abc$74544$auto$blifparse.cc:397:parse_blif$76483.OUT
+Info:    routing  5.36  10.60 Net $abc$74544$new_n10639 (97,10) -> (81,51)
+Info:                          Sink $abc$74544$auto$blifparse.cc:397:parse_blif$76486.D0_01
+Info:      logic  0.56  11.15 Source $abc$74544$auto$blifparse.cc:397:parse_blif$76486.OUT
+Info:    routing  2.82  13.97 Net $abc$74544$new_n10642 (81,51) -> (78,77)
+Info:                          Sink $abc$74544$auto$blifparse.cc:397:parse_blif$76487.D1_10
+Info:      logic  0.56  14.53 Source $abc$74544$auto$blifparse.cc:397:parse_blif$76487.OUT
+Info:    routing  3.99  18.51 Net $abc$74544$new_n10643 (78,77) -> (75,66)
+Info:                          Sink $abc$74544$auto$blifparse.cc:397:parse_blif$78118.D1_00
+Info:      logic  0.64  19.16 Source $abc$74544$auto$blifparse.cc:397:parse_blif$78118.OUT
+Info:    routing  1.62  20.77 Net $abc$74544$new_n12274 (75,66) -> (72,64)
+Info:                          Sink $abc$74544$auto$blifparse.cc:397:parse_blif$78151.D0_00
+Info:      logic  0.61  21.38 Source $abc$74544$auto$blifparse.cc:397:parse_blif$78151.OUT
+Info:    routing  3.33  24.71 Net $abc$74544$new_n12307 (72,64) -> (70,94)
+Info:                          Sink $abc$74544$auto$blifparse.cc:397:parse_blif$79094.D0_10
+Info:      logic  0.55  25.26 Source $abc$74544$auto$blifparse.cc:397:parse_blif$79094.OUT
+Info:    routing  4.49  29.74 Net $abc$74544$new_n13250 (70,94) -> (74,93)
+Info:                          Sink $abc$74544$auto$blifparse.cc:397:parse_blif$82144.D0_01
+Info:      logic  0.56  30.30 Source $abc$74544$auto$blifparse.cc:397:parse_blif$82144.OUT
+Info:    routing  0.54  30.84 Net $abc$74544$new_n16300 (74,93) -> (76,93)
+Info:                          Sink $abc$74544$auto$blifparse.cc:397:parse_blif$82145.D0_01
+Info:      logic  0.47  31.32 Source $abc$74544$auto$blifparse.cc:397:parse_blif$82145.OUT
+Info:    routing  0.00  31.32 Net $abc$74544$auto$rtlil.cc:3513:MuxGate$57301 (76,93) -> (76,93)
+Info:                          Sink $auto$ff.cc:337:slice$17466.DIN
+Info:      setup  0.10  31.42 Source $auto$ff.cc:337:slice$17466.DIN
+Info: 5.69 ns logic, 25.73 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge can_source.clk':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source $iopadmap$top.miso_0.Y
+Info:    routing  0.00  0.00 Net $iopadmap$top.miso_0$conn$Y (165,83) -> (165,83)
+Info:                          Sink $iopadmap$top.miso_0$iosel.GPIO_IN
+Info:      logic  0.38  0.38 Source $iopadmap$top.miso_0$iosel.IN1
+Info:    routing  7.05  7.43 Net tx_spi_master.miso (165,83) -> (126,21)
+Info:                          Sink $auto$ff.cc:337:slice$15470$lt.D0_10
+Info:      logic  0.55  7.97 Source $auto$ff.cc:337:slice$15470$lt.OUT
+Info:    routing  0.00  7.97 Net $auto$ff.cc:337:slice$15470$di (126,21) -> (126,21)
+Info:                          Sink $auto$ff.cc:337:slice$15470.DIN
+Info:      setup  0.10  8.07 Source $auto$ff.cc:337:slice$15470.DIN
+Info: 1.03 ns logic, 7.05 ns routing
+
+Info: Max frequency for clock 'can_source.clk': 31.83 MHz (PASS at 30.00 MHz)
+
+Info: Max delay <async> -> posedge can_source.clk: 8.07 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 8 endpoint(s)
+Info:          + represents [1,8) endpoint(s)
+Info: [  1917,   3418) |+
+Info: [  3418,   4919) |***+
+Info: [  4919,   6420) |*********+
+Info: [  6420,   7921) |************+
+Info: [  7921,   9422) |********+
+Info: [  9422,  10923) |******************+
+Info: [ 10923,  12424) |********************+
+Info: [ 12424,  13925) |**********************+
+Info: [ 13925,  15426) |**********************+
+Info: [ 15426,  16927) |********************************+
+Info: [ 16927,  18428) |********************************************+
+Info: [ 18428,  19929) |*******************************************************+
+Info: [ 19929,  21430) |**********************************************+
+Info: [ 21430,  22931) |*******************************************+
+Info: [ 22931,  24432) |***********************************************+
+Info: [ 24432,  25933) |************************************************************ 
+Info: [ 25933,  27434) |************************************************+
+Info: [ 27434,  28935) |****************+
+Info: [ 28935,  30436) |**************************************+
+Info: [ 30436,  31937) |*****************************************************+
+Info: Update configuration based on routing..
+
+Info: Program finished normally.

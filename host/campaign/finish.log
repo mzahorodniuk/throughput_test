@@ -1,0 +1,57 @@
+=== 1/4 simulation sweep (backpressure livelock) ===
+  wire         batch=16  wire=    5000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=     4 span=     10.3 us dg0=25 dg1=0 served=1 NO-LIVELOCK
+  wire         batch=16  wire=   10000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=     5 span=   13.733 us dg0=25 dg1=0 served=1 NO-LIVELOCK
+  wire         batch=16  wire=   20000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=     8 span=   24.033 us dg0=25 dg1=0 served=1 NO-LIVELOCK
+  wire         batch=16  wire=   50000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=    17 span=   54.933 us dg0=25 dg1=0 served=1 NO-LIVELOCK
+  wire         batch=16  wire=  100000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=    32 span=  106.432 us dg0=25 dg1=0 served=1 NO-LIVELOCK
+  wire         batch=16  wire=  200000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=   340 span= 1163.888 us dg0=25 dg1=0 served=1 LIVELOCK
+  wire         batch=16  wire=  400000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=  1097 span= 3762.896 us dg0=25 dg1=0 served=1 LIVELOCK
+  wire         batch=16  wire=  700000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=  2233 span= 7663.123 us dg0=25 dg1=0 served=1 LIVELOCK
+  wire         batch=16  wire= 1000000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=  3369 span=11563.351 us dg0=25 dg1=0 served=1 LIVELOCK
+  wire         batch=16  wire= 2000000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=  7156 span=24565.254 us dg0=25 dg1=0 served=1 LIVELOCK
+  drain_model  batch=16  wire= 1000000 drain=0 sck=1/1 buf=2048  hot=0   -> minfree= 2048 run=     1 span=      0.0 us dg0=25 dg1=0 served=1 NO-LIVELOCK
+  drain_model  batch=16  wire= 1000000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=  3369 span=11563.351 us dg0=25 dg1=0 served=1 LIVELOCK
+  batch        batch=1   wire=  400000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  248 run= 10911 span=37457.292 us dg0=200 dg1=0 served=1 LIVELOCK
+  batch        batch=4   wire=  400000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  248 run=  5198 span=17842.855 us dg0=100 dg1=0 served=1 LIVELOCK
+  batch        batch=8   wire=  400000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  248 run=  2429 span=  8336.05 us dg0=50 dg1=0 served=1 LIVELOCK
+  batch        batch=16  wire=  400000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=  1097 span= 3762.896 us dg0=25 dg1=0 served=1 LIVELOCK
+  batch        batch=28  wire=  400000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=   32 run=   537 span= 1840.248 us dg0=15 dg1=0 served=1 LIVELOCK
+  txbuf        batch=16  wire=  100000 drain=1 sck=1/1 buf=2048  hot=0   -> minfree=  176 run=    32 span=  106.432 us dg0=25 dg1=0 served=1 NO-LIVELOCK
+  txbuf        batch=16  wire=  100000 drain=1 sck=1/1 buf=1024  hot=0   -> minfree=  160 run=    32 span=  106.432 us dg0=25 dg1=0 served=1 NO-LIVELOCK
+  txbuf        batch=16  wire=  100000 drain=1 sck=1/1 buf=512   hot=0   -> minfree=  224 run=    32 span=  106.432 us dg0=25 dg1=0 served=1 NO-LIVELOCK
+  txbuf        batch=16  wire=  100000 drain=1 sck=1/1 buf=256   hot=0   -> minfree=  256 run= 12406 span=42590.074 us dg0=0 dg1=0 served=0 LIVELOCK
+  sockets      batch=16  wire= 1000000 drain=1 sck=8/1 buf=2048  hot=0   -> minfree=  176 run=  3369 span=11563.351 us dg0=25 dg1=0 served=1 LIVELOCK
+  sockets      batch=16  wire= 1000000 drain=1 sck=8/2 buf=2048  hot=0   -> minfree=  320 run=     1 span=      0.0 us dg0=13 dg1=13 served=2 NO-LIVELOCK
+  sockets      batch=16  wire= 1000000 drain=1 sck=8/4 buf=2048  hot=0   -> minfree= 1184 run=     1 span=      0.0 us dg0=7 dg1=7 served=4 NO-LIVELOCK
+  sockets      batch=16  wire= 1000000 drain=1 sck=8/8 buf=2048  hot=0   -> minfree= 1616 run=     1 span=      0.0 us dg0=4 dg1=4 served=8 NO-LIVELOCK
+  hot_socket   batch=16  wire= 1000000 drain=1 sck=8/2 buf=2048  hot=8   -> minfree=  176 run=  3308 span= 11353.92 us dg0=22 dg1=4 served=2 LIVELOCK
+  hot_socket   batch=16  wire= 1000000 drain=1 sck=8/2 buf=2048  hot=16  -> minfree=  176 run=  3344 span=11477.519 us dg0=24 dg1=2 served=2 LIVELOCK
+  hot_socket   batch=16  wire= 1000000 drain=1 sck=8/2 buf=2048  hot=32  -> minfree=  176 run=  3353 span=11508.418 us dg0=25 dg1=2 served=2 LIVELOCK
+
+CSV: /home/misha/thrpt_test/sim/results/sim/backpressure.csv
+log: /home/misha/thrpt_test/sim/results/sim/backpressure.log
+
+=== 2/4 repeatability, batch 16 ===
+tag=batch16 batch=16 md5=d0f2e561f1a1  reps=5
+    60000 pps offered -> delivered median    59,998  range    59,997..   60,000  spread   0.0 %
+   100000 pps offered -> delivered median   100,000  range    99,763..  100,000  spread   0.2 %
+   105000 pps offered -> delivered median   105,000  range   104,988..  105,000  spread   0.0 %
+   110000 pps offered -> delivered median   105,744  range   104,878..  105,775  spread   0.8 %
+   120000 pps offered -> delivered median   105,803  range   103,624..  107,660  spread   3.7 %
+   140000 pps offered -> delivered median    80,814  range    80,745..   80,876  spread   0.2 %
+
+CSV: /home/misha/thrpt_test/host/campaign/results/batch16/repeat.csv
+
+=== 3/4 figures ===
+arms: {'batch1': 1, 'batch16': 16, 'batch28': 28, 'batch4': 4}
+  wrote /home/misha/thrpt_test/figures/out/campaign_eth_ramp.pdf
+  wrote /home/misha/thrpt_test/figures/out/campaign_socket_placement.pdf
+  wrote /home/misha/thrpt_test/figures/out/campaign_batching.pdf
+  wrote /home/misha/thrpt_test/figures/out/campaign_batch_sweep.pdf
+  wrote /home/misha/thrpt_test/figures/out/campaign_can.pdf
+  wrote /home/misha/thrpt_test/figures/out/campaign_combined.pdf
+  wrote /home/misha/thrpt_test/figures/out/campaign_livelock.pdf
+
+=== 4/4 report ===
+wrote /home/misha/thrpt_test/RESULTS.md (13194 bytes)
+FINISH DONE

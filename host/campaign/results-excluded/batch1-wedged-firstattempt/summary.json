@@ -1,0 +1,23 @@
+{
+  "both_p9217_knee": null,
+  "both_p9217_wedged_at": 1000,
+  "both_p9219_knee": null,
+  "both_p9219_wedged_at": 1000,
+  "both_spread_knee": null,
+  "both_spread_wedged_at": 1000,
+  "can_fpga_loss_at": 100,
+  "can_knee": null,
+  "eth_p9217_knee": null,
+  "eth_p9217_wedged_at": 1000,
+  "eth_p9219_knee": null,
+  "eth_p9219_wedged_at": 1000,
+  "eth_spread_knee": {
+    "achieved_pps": 20000.0,
+    "batch_mean": 1.0,
+    "delivered_pps": 20000.0,
+    "loss_pct": 0.0,
+    "requested_pps": 20000
+  },
+  "eth_spread_wedged_at": 40000,
+  "wall_seconds": 71.2
+}

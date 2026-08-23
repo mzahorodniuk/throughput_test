@@ -1,0 +1,17 @@
+== TX_BATCH_MAX_PACKETS: 4 -> 28 ==
+19:    TX_BATCH_MAX_PACKETS : integer := 28;
+== synth ==
+== pnr ==
+== pack ==
+== built in 111 s, md5 28b235e47b7f0488ea9a544b58c409cc ==
+Info: Packing CPEs..
+Info: Device utilisation:
+Info: 	            CPE_COMP:       0/  20480     0%
+Info: 	         CPE_CPLINES:     180/  20480     0%
+Info: 	              CPE_LT:   15453/  40960    37%
+Info: 	              CPE_FF:    3833/  40960     9%
+Info: 	           CPE_RAMIO:    2581/  40960     6%
+Info: Repacking CPEs..
+== flash ==
+== board check ==
+both W5500s answer ping after 1s

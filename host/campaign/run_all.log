@@ -1,0 +1,56 @@
+############ batch 16 ############
+batch 16 already on the board (md5 d0f2e561f1a1f3f12d4b1102e92dc53e)
+=== knees (loss <= 0.1 %, wire-limited steps excluded) ===
+  both_p9217_knee           89,983 pkt/s delivered (offered 90,000, batch 7.50)
+  both_p9219_knee           89,973 pkt/s delivered (offered 90,000, batch 7.51)
+  both_spread_knee          99,989 pkt/s delivered (offered 100,000, batch 10.81)
+  can_knee                   1,472 pkt/s delivered (offered 1,473, batch 1.00)
+  eth_p9217_knee           104,986 pkt/s delivered (offered 105,000, batch 15.23)
+  eth_p9219_knee           104,955 pkt/s delivered (offered 105,000, batch 15.23)
+  eth_spread_knee          100,000 pkt/s delivered (offered 100,000, batch 12.47)
+
+CSV: /home/misha/thrpt_test/host/campaign/results/batch16/steps.csv
+meta: /home/misha/thrpt_test/host/campaign/results/batch16/meta.json
+############ batch 4 ############
+flashing batch4  md5 ce36f9c1cf598ac54c00973cea831197
+both W5500s answer after 1s
+=== knees (loss <= 0.1 %, wire-limited steps excluded) ===
+  both_p9217_knee           79,976 pkt/s delivered (offered 80,000, batch 3.77)
+  both_p9219_knee           79,992 pkt/s delivered (offered 80,000, batch 3.77)
+  both_spread_knee          79,993 pkt/s delivered (offered 80,000, batch 3.77)
+  can_knee                   1,263 pkt/s delivered (offered 1,263, batch 1.00)
+  eth_p9217_knee            79,988 pkt/s delivered (offered 80,000, batch 4.00)
+  eth_p9219_knee            79,991 pkt/s delivered (offered 80,000, batch 4.00)
+  eth_spread_knee           80,000 pkt/s delivered (offered 80,000, batch 3.98)
+
+CSV: /home/misha/thrpt_test/host/campaign/results/batch4/steps.csv
+meta: /home/misha/thrpt_test/host/campaign/results/batch4/meta.json
+############ batch 1 ############
+flashing batch1  md5 69d5f61630385f9e12772d5f2bff01cf
+both W5500s answer after 1s
+=== knees (loss <= 0.1 %, wire-limited steps excluded) ===
+  both_p9217_knee           29,977 pkt/s delivered (offered 30,000, batch 1.00)
+  both_p9219_knee           29,978 pkt/s delivered (offered 30,000, batch 1.00)
+  both_spread_knee          30,000 pkt/s delivered (offered 30,000, batch 1.00)
+  can_knee                   1,264 pkt/s delivered (offered 1,264, batch 1.00)
+  eth_p9217_knee            34,999 pkt/s delivered (offered 35,000, batch 1.00)
+  eth_p9219_knee            34,998 pkt/s delivered (offered 35,000, batch 1.00)
+  eth_spread_knee           35,000 pkt/s delivered (offered 35,000, batch 1.00)
+
+CSV: /home/misha/thrpt_test/host/campaign/results/batch1/steps.csv
+meta: /home/misha/thrpt_test/host/campaign/results/batch1/meta.json
+############ batch 28 ############
+flashing batch28  md5 28b235e47b7f0488ea9a544b58c409cc
+both W5500s answer after 1s
+=== knees (loss <= 0.1 %, wire-limited steps excluded) ===
+  both_p9217_knee           89,972 pkt/s delivered (offered 90,000, batch 7.52)
+  both_p9219_knee           89,959 pkt/s delivered (offered 90,000, batch 7.49)
+  both_spread_knee         100,000 pkt/s delivered (offered 100,000, batch 13.11)
+  can_knee                   1,474 pkt/s delivered (offered 1,474, batch 1.00)
+  eth_p9217_knee           104,965 pkt/s delivered (offered 105,000, batch 22.38)
+  eth_p9219_knee           105,000 pkt/s delivered (offered 105,000, batch 22.37)
+  eth_spread_knee          104,985 pkt/s delivered (offered 105,000, batch 17.79)
+
+CSV: /home/misha/thrpt_test/host/campaign/results/batch28/steps.csv
+meta: /home/misha/thrpt_test/host/campaign/results/batch28/meta.json
+############ all arms done ############

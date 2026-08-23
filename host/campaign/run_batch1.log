@@ -1,0 +1,118 @@
+tag=batch1  batch=1  bitstream md5=69d5f61630385f9e12772d5f2bff01cf
+wire limit 148,809 pps  ->  /home/misha/thrpt_test/host/campaign/results/batch1
+host 192.168.2.106  SO_RCVBUF granted 416 KiB
+board answers a trickle: OK
+
+--- ETH spread (8 socket(s)) ---
+  spread         req=   1000 ach=    1,000 deliv=    1,000 loss=   0.000% batch= 1.00/1  dg=  3000 hd=    0 ilk=0 af=0 rag=0 gap=none/0
+  spread         req=   5000 ach=    5,000 deliv=    5,000 loss=   0.000% batch= 1.00/1  dg= 15000 hd=    0 ilk=0 af=0 rag=0 gap=none/0
+  spread         req=  10000 ach=   10,000 deliv=   10,000 loss=   0.000% batch= 1.00/1  dg= 30000 hd=    0 ilk=0 af=0 rag=0 gap=none/0
+  spread         req=  20000 ach=   20,000 deliv=   20,000 loss=   0.000% batch= 1.00/1  dg= 60000 hd=    0 ilk=0 af=0 rag=0 gap=none/0
+  spread         req=  25000 ach=   25,000 deliv=   24,999 loss=   0.005% batch= 1.00/1  dg= 74996 hd=    0 ilk=1 af=0 rag=2 gap=spread/1
+  spread         req=  30000 ach=   30,000 deliv=   29,999 loss=   0.002% batch= 1.00/1  dg= 89998 hd=    0 ilk=0 af=0 rag=1 gap=bursty/1
+  spread         req=  35000 ach=   35,000 deliv=   35,000 loss=   0.000% batch= 1.00/1  dg=105000 hd=    0 ilk=0 af=0 rag=0 gap=none/0
+  spread         req=  40000 ach=   40,000 deliv=    6,831 loss=  82.923% batch= 1.00/3  dg= 20495 hd=    0 ilk=0 af=0 rag=293 gap=bursty/1581
+  *** WEDGED at 40000 pps
+  reflashing (#1) ...
+
+--- ETH p9217 (1 socket(s)) ---
+  p9217          req=   1000 ach=    1,000 deliv=    1,000 loss=   0.000% batch= 1.00/1  dg=  3000 hd=    0 ilk=0 af=0 rag=0 gap=none/0
+  p9217          req=   5000 ach=    5,000 deliv=    5,000 loss=   0.000% batch= 1.00/1  dg= 15000 hd=    0 ilk=0 af=0 rag=0 gap=none/0
+  p9217          req=  10000 ach=   10,000 deliv=    9,999 loss=   0.013% batch= 1.00/1  dg= 29996 hd=    0 ilk=1 af=0 rag=2 gap=spread/1
+  p9217          req=  20000 ach=   20,000 deliv=   19,999 loss=   0.003% batch= 1.00/1  dg= 59998 hd=    0 ilk=0 af=0 rag=1 gap=bursty/1
+  p9217          req=  25000 ach=   25,000 deliv=   24,998 loss=   0.008% batch= 1.00/1  dg= 74994 hd=    0 ilk=0 af=0 rag=3 gap=spread/1
+  p9217          req=  30000 ach=   30,000 deliv=   29,978 loss=   0.073% batch= 1.00/1  dg= 89934 hd=    0 ilk=0 af=0 rag=0 gap=bursty/9
+  p9217          req=  35000 ach=   35,000 deliv=   34,999 loss=   0.003% batch= 1.00/1  dg=104997 hd=    0 ilk=0 af=0 rag=1 gap=spread/1
+  p9217          req=  40000 ach=   40,000 deliv=   33,686 loss=  15.786% batch= 1.00/34 dg=101121 hd=    0 ilk=0 af=0 rag=16380 gap=bursty/14
+  p9217          req=  50000 ach=   50,000 deliv=   26,888 loss=  46.223% batch= 1.02/19 dg= 82426 hd=    0 ilk=0 af=0 rag=31113 gap=bursty/43
+  p9217          req=  60000 ach=   60,000 deliv=   21,182 loss=  64.696% batch= 1.05/57 dg= 68327 hd=    0 ilk=0 af=0 rag=44121 gap=bursty/61
+  p9217          req=  80000 ach=   80,000 deliv=   22,906 loss=  71.367% batch= 1.04/136 dg= 72165 hd=    0 ilk=0 af=0 rag=39430 gap=bursty/94
+  p9217          req=  90000 ach=   90,000 deliv=   29,343 loss=  67.397% batch= 1.04/161 dg= 89190 hd=    0 ilk=0 af=0 rag=21076 gap=bursty/154
+  p9217          req= 100000 ach=  100,000 deliv=   33,155 loss=  66.845% batch= 1.04/157 dg= 99743 hd=    0 ilk=0 af=0 rag=11016 gap=bursty/191
+  p9217          req= 105000 ach=  105,000 deliv=   31,766 loss=  69.746% batch= 1.03/160 dg= 95482 hd=    0 ilk=0 af=0 rag=12380 gap=bursty/290
+  p9217          req= 110000 ach=  110,000 deliv=    8,294 loss=  92.460% batch= 1.02/147 dg= 24897 hd=    0 ilk=0 af=0 rag=1202 gap=bursty/4163
+  p9217          req= 115000 ach=  115,000 deliv=    7,570 loss=  93.417% batch= 1.02/112 dg= 22676 hd=    0 ilk=0 af=0 rag=1187 gap=bursty/4132
+  p9217          req= 120000 ach=  120,000 deliv=   13,265 loss=  88.946% batch= 1.03/162 dg= 39757 hd=    0 ilk=0 af=0 rag=3198 gap=bursty/4129
+  p9217          req= 130000 ach=  130,000 deliv=    7,234 loss=  94.435% batch= 1.05/152 dg= 21691 hd=    0 ilk=0 af=0 rag=1331 gap=bursty/4159
+  p9217          req= 140000 ach=  140,000 deliv=   15,331 loss=  89.049% batch= 1.04/118 dg= 45930 hd=    0 ilk=0 af=0 rag=4591 gap=bursty/4163
+  p9217          req= 148000 ach=  148,000 deliv=    7,155 loss=  95.165% batch= 1.04/143 dg= 21491 hd=    0 ilk=0 af=0 rag=1285 gap=bursty/4205
+
+--- ETH p9219 (1 socket(s)) ---
+  p9219          req=   1000 ach=    1,000 deliv=    1,000 loss=   0.000% batch= 1.00/1  dg=  3000 hd=    0 ilk=0 af=0 rag=0 gap=none/0
+  p9219          req=   5000 ach=    5,000 deliv=    5,000 loss=   0.000% batch= 1.00/1  dg= 15000 hd=    0 ilk=0 af=0 rag=0 gap=none/0
+  p9219          req=  10000 ach=   10,000 deliv=   10,000 loss=   0.000% batch= 1.00/1  dg= 30000 hd=    0 ilk=0 af=0 rag=0 gap=none/0
+  p9219          req=  20000 ach=   20,000 deliv=   19,999 loss=   0.003% batch= 1.00/1  dg= 59998 hd=    0 ilk=0 af=0 rag=1 gap=bursty/1
+  p9219          req=  25000 ach=   25,000 deliv=   24,999 loss=   0.003% batch= 1.00/1  dg= 74998 hd=    0 ilk=0 af=0 rag=1 gap=bursty/1
+  p9219          req=  30000 ach=   30,000 deliv=   29,912 loss=   0.293% batch= 1.00/1  dg= 89736 hd=    0 ilk=0 af=0 rag=0 gap=bursty/9
+  p9219          req=  35000 ach=   35,000 deliv=   34,998 loss=   0.006% batch= 1.00/1  dg=104994 hd=    0 ilk=0 af=0 rag=3 gap=spread/1
+  p9219          req=  40000 ach=   40,000 deliv=   34,043 loss=  14.892% batch= 1.00/16 dg=102198 hd=    0 ilk=0 af=0 rag=14978 gap=bursty/55
+  p9219          req=  50000 ach=   50,000 deliv=   26,767 loss=  46.465% batch= 1.02/30 dg= 81870 hd=    0 ilk=0 af=0 rag=31734 gap=bursty/54
+  p9219          req=  60000 ach=   60,000 deliv=   21,314 loss=  64.476% batch= 1.05/54 dg= 68395 hd=    0 ilk=0 af=0 rag=43997 gap=bursty/59
+  p9219          req=  80000 ach=   80,000 deliv=   24,314 loss=  69.607% batch= 1.04/111 dg= 76475 hd=    0 ilk=0 af=0 rag=34862 gap=bursty/113
+  p9219          req=  90000 ach=   90,000 deliv=   30,386 loss=  66.237% batch= 1.03/143 dg= 92194 hd=    0 ilk=0 af=0 rag=18142 gap=bursty/135
+  p9219          req= 100000 ach=  100,000 deliv=   32,676 loss=  67.324% batch= 1.04/156 dg= 98358 hd=    0 ilk=0 af=0 rag=11976 gap=bursty/186
+  p9219          req= 105000 ach=  105,000 deliv=   31,543 loss=  69.959% batch= 1.04/160 dg= 94857 hd=    0 ilk=0 af=0 rag=12124 gap=bursty/294
+  p9219          req= 110000 ach=  110,000 deliv=   19,358 loss=  82.401% batch= 1.03/160 dg= 58053 hd=    0 ilk=0 af=0 rag=5473 gap=bursty/4090
+  p9219          req= 115000 ach=  115,000 deliv=    6,471 loss=  94.373% batch= 1.02/80 dg= 19388 hd=    0 ilk=0 af=0 rag=980 gap=bursty/4231
+  p9219          req= 120000 ach=  120,000 deliv=   18,510 loss=  84.575% batch= 1.03/141 dg= 55490 hd=    0 ilk=0 af=0 rag=5854 gap=bursty/4129
+  p9219          req= 130000 ach=  129,999 deliv=    5,212 loss=  95.991% batch= 1.03/106 dg= 15632 hd=    0 ilk=0 af=0 rag=689 gap=bursty/4175
+  p9219          req= 140000 ach=  140,000 deliv=   18,572 loss=  86.734% batch= 1.03/139 dg= 55685 hd=    0 ilk=0 af=0 rag=5867 gap=bursty/4181
+  p9219          req= 148000 ach=  148,000 deliv=    9,938 loss=  93.285% batch= 1.03/126 dg= 29967 hd=    0 ilk=0 af=0 rag=2261 gap=bursty/4139
+
+--- CAN only (PONG) ---
+  can  req=  100 bus=     105 f/s uniq=   526 loss=  0.000% failed=    0 tec=  0 batch= 1.00 blame=-
+  can  req=  200 bus=     211 f/s uniq=  1053 loss=  0.000% failed=    0 tec=  0 batch= 1.00 blame=-
+  can  req=  400 bus=     421 f/s uniq=  2104 loss=  0.000% failed=    0 tec=  0 batch= 1.00 blame=-
+  can  req=  600 bus=     631 f/s uniq=  3157 loss=  0.000% failed=    0 tec=  0 batch= 1.00 blame=-
+  can  req=  800 bus=     841 f/s uniq=  4205 loss=  0.000% failed=    0 tec=  0 batch= 1.00 blame=-
+  can  req= 1000 bus=   1,053 f/s uniq=  5265 loss=  0.000% failed=    0 tec=  0 batch= 1.00 blame=-
+  can  req= 1200 bus=   1,264 f/s uniq=  6319 loss=  0.000% failed=    0 tec=  0 batch= 1.00 blame=-
+  can  req= 1400 bus=   1,473 f/s uniq=  7342 loss=  0.326% failed=    0 tec=  0 batch= 1.00 blame=FPGA
+
+--- ETH+CAN spread  (CAN 1400 f/s) ---
+  spread         req=   1000 ach=    1,000 deliv=    1,000 loss=   0.000% batch= 1.00/1  dg=  7923 hd=    0 ilk=0 af=0 rag=0 gap=none/0  | CAN sent=4934 uniq=4923 loss=0.223%
+  spread         req=  10000 ach=   10,000 deliv=    9,999 loss=   0.007% batch= 1.00/1  dg= 34920 hd=    0 ilk=0 af=0 rag=1 gap=bursty/1  | CAN sent=4933 uniq=4922 loss=0.223%
+  spread         req=  20000 ach=   20,000 deliv=   19,999 loss=   0.003% batch= 1.00/1  dg= 64922 hd=    0 ilk=0 af=0 rag=1 gap=bursty/1  | CAN sent=4934 uniq=4924 loss=0.203%
+  spread         req=  30000 ach=   30,000 deliv=   30,000 loss=   0.000% batch= 1.00/1  dg= 94912 hd=    0 ilk=0 af=0 rag=0 gap=none/0  | CAN sent=4933 uniq=4912 loss=0.426%
+  spread         req=  40000 ach=   40,000 deliv=    2,650 loss=  93.374% batch= 1.00/3  dg=  8482 hd=    0 ilk=0 af=0 rag=56 gap=bursty/1776  | CAN sent=4931 uniq=527 loss=89.312%
+  *** WEDGED at 40000 pps
+  reflashing (#2) ...
+
+--- ETH+CAN p9217  (CAN 1400 f/s) ---
+  p9217          req=   1000 ach=    1,000 deliv=    1,000 loss=   0.000% batch= 1.00/1  dg=  7917 hd=    0 ilk=0 af=0 rag=0 gap=none/0  | CAN sent=4933 uniq=4917 loss=0.324%
+  p9217          req=  10000 ach=   10,000 deliv=    9,999 loss=   0.007% batch= 1.00/1  dg= 34921 hd=    0 ilk=1 af=0 rag=1 gap=bursty/1  | CAN sent=4933 uniq=4923 loss=0.203%
+  p9217          req=  20000 ach=   20,000 deliv=   19,997 loss=   0.013% batch= 1.00/1  dg= 64926 hd=    0 ilk=0 af=0 rag=4 gap=spread/1  | CAN sent=4934 uniq=4934 loss=0.000%
+  p9217          req=  30000 ach=   30,000 deliv=   29,977 loss=   0.078% batch= 1.00/1  dg= 94860 hd=    0 ilk=0 af=0 rag=2 gap=bursty/9  | CAN sent=4933 uniq=4930 loss=0.061%
+  p9217          req=  40000 ach=   40,000 deliv=   36,928 loss=   7.681% batch= 1.00/20 dg=115514 hd=    0 ilk=0 af=0 rag=2378 gap=spread/6  | CAN sent=4933 uniq=4667 loss=5.392%
+  p9217          req=  60000 ach=   60,000 deliv=   19,860 loss=  66.899% batch= 1.04/125 dg= 69230 hd=    0 ilk=0 af=0 rag=44284 gap=bursty/64  | CAN sent=4933 uniq=4917 loss=0.324%
+  p9217          req=  80000 ach=   80,000 deliv=   24,091 loss=  69.886% batch= 1.04/148 dg= 79964 hd=   44 ilk=0 af=0 rag=32079 gap=bursty/125  [INVALID: host dropped]  | CAN sent=4934 uniq=4917 loss=0.344%
+  p9217          req=  90000 ach=   90,000 deliv=   29,112 loss=  67.654% batch= 1.03/148 dg= 93116 hd=    0 ilk=0 af=0 rag=18412 gap=bursty/123  | CAN sent=4937 uniq=4932 loss=0.101%
+  p9217          req= 100000 ach=  100,000 deliv=   30,439 loss=  69.561% batch= 1.04/149 dg= 96570 hd=    0 ilk=0 af=0 rag=15167 gap=bursty/161  | CAN sent=4932 uniq=4927 loss=0.101%
+  p9217          req= 110000 ach=  110,000 deliv=    5,399 loss=  95.091% batch= 1.03/83 dg= 18182 hd=    0 ilk=0 af=0 rag=2104 gap=bursty/24376  | CAN sent=4931 uniq=1965 loss=60.150%
+  *** WEDGED at 110000 pps
+  reflashing (#3) ...
+
+--- ETH+CAN p9219  (CAN 1400 f/s) ---
+  p9219          req=   1000 ach=      999 deliv=      999 loss=   0.000% batch= 1.00/1  dg=  7912 hd=    0 ilk=0 af=0 rag=0 gap=none/0  | CAN sent=4934 uniq=4913 loss=0.426%
+  p9219          req=  10000 ach=   10,000 deliv=   10,000 loss=   0.000% batch= 1.00/1  dg= 34923 hd=    0 ilk=0 af=0 rag=0 gap=none/0  | CAN sent=4933 uniq=4923 loss=0.203%
+  p9219          req=  20000 ach=   20,000 deliv=   20,000 loss=   0.000% batch= 1.00/1  dg= 64913 hd=    0 ilk=0 af=0 rag=0 gap=none/0  | CAN sent=4934 uniq=4913 loss=0.426%
+  p9219          req=  30000 ach=   30,000 deliv=   29,978 loss=   0.074% batch= 1.00/1  dg= 94862 hd=    0 ilk=1 af=0 rag=2 gap=bursty/8  | CAN sent=4934 uniq=4929 loss=0.101%
+  p9219          req=  40000 ach=   40,000 deliv=   27,419 loss=  31.453% batch= 1.01/20 dg= 87572 hd=    0 ilk=0 af=0 rag=30350 gap=bursty/37  | CAN sent=4934 uniq=4929 loss=0.101%
+  p9219          req=  60000 ach=   59,976 deliv=   20,149 loss=  66.404% batch= 1.05/156 dg= 70261 hd=    0 ilk=0 af=0 rag=42810 gap=bursty/110  | CAN sent=4931 uniq=4920 loss=0.223%
+  p9219          req=  80000 ach=   80,000 deliv=   24,411 loss=  69.487% batch= 1.04/141 dg= 81478 hd=    0 ilk=0 af=0 rag=30266 gap=bursty/123  | CAN sent=4934 uniq=4921 loss=0.264%
+  p9219          req=  90000 ach=   90,000 deliv=   27,874 loss=  69.028% batch= 1.04/154 dg= 89541 hd=    0 ilk=0 af=0 rag=21808 gap=bursty/175  | CAN sent=4932 uniq=4927 loss=0.101%
+  p9219          req= 100000 ach=  100,000 deliv=   30,748 loss=  69.252% batch= 1.03/152 dg= 97489 hd=    0 ilk=0 af=0 rag=13885 gap=bursty/196  | CAN sent=4932 uniq=4926 loss=0.122%
+  p9219          req= 110000 ach=  110,000 deliv=    8,680 loss=  92.109% batch= 1.02/98 dg= 31007 hd=    0 ilk=0 af=0 rag=3492 gap=bursty/4243  | CAN sent=4931 uniq=4931 loss=0.000%
+  p9219          req= 120000 ach=  120,000 deliv=    5,725 loss=  95.229% batch= 1.01/127 dg= 22093 hd=    0 ilk=0 af=0 rag=1337 gap=bursty/4202  | CAN sent=4932 uniq=4927 loss=0.101%
+
+=== knees (loss <= 0.1 %, wire-limited steps excluded) ===
+  both_p9217_knee           29,977 pkt/s delivered (offered 30,000, batch 1.00)
+  both_p9219_knee           29,978 pkt/s delivered (offered 30,000, batch 1.00)
+  both_spread_knee          30,000 pkt/s delivered (offered 30,000, batch 1.00)
+  can_knee                   1,264 pkt/s delivered (offered 1,264, batch 1.00)
+  eth_p9217_knee            34,999 pkt/s delivered (offered 35,000, batch 1.00)
+  eth_p9219_knee            34,998 pkt/s delivered (offered 35,000, batch 1.00)
+  eth_spread_knee           35,000 pkt/s delivered (offered 35,000, batch 1.00)
+
+CSV: /home/misha/thrpt_test/host/campaign/results/batch1/steps.csv
+meta: /home/misha/thrpt_test/host/campaign/results/batch1/meta.json

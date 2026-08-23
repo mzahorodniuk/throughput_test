@@ -471,6 +471,16 @@ def run_step(send_fn, receiver, rate, duration, drain=0.5, ports=ALL_PORTS):
 
     `send_fn(seq)` must transmit one packet carrying `seq`. Sequence numbers
     restart at 0 each step so the gap analysis is per-step.
+
+    The step is cut short once SEQ_SPAN packets have gone out. Sequence numbers
+    live in a finite band so no reading can trip the interlock (SEQ_MIN..SEQ_MAX),
+    and `pack` wraps `seq % SEQ_SPAN`: past that point every packet repeats a
+    value already sent, `unique` saturates at SEQ_SPAN and loss becomes pure
+    arithmetic rather than a measurement. `rate * duration > SEQ_SPAN` used to
+    report exactly `sent - SEQ_SPAN` duplicates and call it FPGA loss, which put
+    a hard fake knee at SEQ_SPAN/duration -- 30 037 pps for a 3 s step -- no
+    matter how fast the board actually was. Measuring over a shorter window is
+    the honest trade: at 100 kpps the cap still leaves 0.9 s and 90 112 packets.
     """
     receiver.reset()
     drops_before = udp_drops(ports)
@@ -480,7 +490,7 @@ def run_step(send_fn, receiver, rate, duration, drain=0.5, ports=ALL_PORTS):
     t0 = time.perf_counter()
     sent = 0
     deadline = t0 + duration
-    while time.perf_counter() < deadline:
+    while sent < SEQ_SPAN and time.perf_counter() < deadline:
         send_fn(sent)
         sent += 1
         pacer.wait()
@@ -537,9 +547,14 @@ def find_knee(step_fn, ladder, loss_limit=0.1, alive_fn=None):
     returns False the board has wedged and BoardWedged is raised.
 
     Loss is assumed to rise with rate. When it does not -- a step passing above
-    one that failed -- that is reported rather than quietly believed, because it
-    means something other than a rate limit is going on and the "knee" would be
-    meaningless.
+    one that failed -- the earlier failure is discarded, because a clean run at a
+    higher rate is proof the board was not rate-limited there. It used to be
+    latched instead: one step a hair over the limit (0.108% against a 0.1% limit
+    is ~15 straggler packets out of 90 112) became `first_bad` for the rest of the
+    climb, every clean higher rate was filed as non-monotonic, and the bisector
+    then reported a "knee" far below rates that had visibly just passed. The
+    warning is still printed -- a noisy step is worth seeing -- but it no longer
+    decides the answer.
 
     Returns (rate, found). `found` is False when the ladder ran out without ever
     losing packets: the answer is then ">= rate", NOT a knee. Reporting that as a
@@ -559,11 +574,12 @@ def find_knee(step_fn, ladder, loss_limit=0.1, alive_fn=None):
         if not valid:
             continue
         if loss <= loss_limit:
-            if first_bad is None:
-                last_good = rate
-            else:
-                # Passed at a rate above one that already failed.
+            if first_bad is not None:
+                # Passed at a rate above one that already failed: that failure
+                # was noise. Report it, then forget it.
                 non_monotonic.append((first_bad, rate))
+                first_bad = None
+            last_good = rate
             consecutive_bad = 0
         else:
             check(rate, loss)

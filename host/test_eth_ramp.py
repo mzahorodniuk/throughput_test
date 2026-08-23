@@ -25,13 +25,19 @@ import time
 
 import scis
 
-# Geometric below 16k, then finer. Measured behaviour: >=16k is clean, 32k wedges
-# the board permanently, so the interesting region is in between and jumping
-# straight from 16k to 32k both skips the knee and costs a power-cycle.
-# The RX and TX W5500s are separate chips on separate SPI masters, so their costs
-# overlap: the SPI-bound ceiling is ~37-48 kpps, and the knee should be under it.
+# Geometric to 16k, finer through 32-40k where datagram batching starts to
+# engage, then coarse to the SPI-bound ceiling. The old ladder stopped at 32000,
+# which made --max-rate above that silently do nothing: every run reported a
+# "knee" at the top rung it happened to reach.
+#
+# Where the top has to be: each W5500 has its own SPI master, so the two halves
+# of the loop overlap rather than add. Simulation with paced arrivals puts the
+# receive half at ~98 kpps (tb_w5500_rx_sustained) and the transmit half above
+# 100 kpps (tb_dc_w5500_tx), and the drain rate measured on the board is
+# ~100 kpps. A ladder that cannot reach past 100k cannot find a real knee.
 LADDER = [100, 250, 500, 1000, 2000, 4000, 8000, 12000, 16000,
-          18000, 20000, 22000, 24000, 26000, 28000, 30000, 32000]
+          20000, 24000, 28000, 32000, 36000, 40000, 50000, 60000,
+          70000, 80000, 90000, 100000, 120000, 150000]
 
 
 def make_sender(receiver, ports):

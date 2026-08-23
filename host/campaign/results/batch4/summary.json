@@ -1,0 +1,55 @@
+{
+  "both_p9217_knee": {
+    "achieved_pps": 80000.0,
+    "batch_mean": 3.771,
+    "delivered_pps": 79976.0,
+    "loss_pct": 0.03,
+    "requested_pps": 80000
+  },
+  "both_p9219_knee": {
+    "achieved_pps": 79999.9,
+    "batch_mean": 3.771,
+    "delivered_pps": 79991.6,
+    "loss_pct": 0.0104,
+    "requested_pps": 80000
+  },
+  "both_spread_knee": {
+    "achieved_pps": 79999.8,
+    "batch_mean": 3.77,
+    "delivered_pps": 79993.1,
+    "loss_pct": 0.0083,
+    "requested_pps": 80000
+  },
+  "both_spread_wedged_at": 90000,
+  "can_fpga_loss_at": 1400,
+  "can_knee": {
+    "achieved_pps": 1262.8,
+    "batch_mean": 1.0,
+    "delivered_pps": 1262.8,
+    "loss_pct": 0.0,
+    "requested_pps": 1200
+  },
+  "eth_p9217_knee": {
+    "achieved_pps": 80000.0,
+    "batch_mean": 3.997,
+    "delivered_pps": 79987.7,
+    "loss_pct": 0.0154,
+    "requested_pps": 80000
+  },
+  "eth_p9219_knee": {
+    "achieved_pps": 79999.9,
+    "batch_mean": 3.998,
+    "delivered_pps": 79990.9,
+    "loss_pct": 0.0112,
+    "requested_pps": 80000
+  },
+  "eth_spread_knee": {
+    "achieved_pps": 80000.0,
+    "batch_mean": 3.976,
+    "delivered_pps": 80000.0,
+    "loss_pct": 0.0,
+    "requested_pps": 80000
+  },
+  "eth_spread_wedged_at": 90000,
+  "wall_seconds": 524.8
+}
